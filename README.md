@@ -4,7 +4,6 @@
 
 - [Prerequisites](#prerequisites)
 - [Instructions](#instructions)
-- [API Endpoints](#api-endpoints)
 
 ## 🥇Prerequisites
 
