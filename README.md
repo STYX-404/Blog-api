@@ -84,13 +84,13 @@ And by now you should be able to go to `localhost:3000/api/v1` to test that ever
 
 for authentication purposes add the user token you got when you signed up to the authentication header or you will get `please log in` error
 
-![Alt text](images\add_token.png)
+![Alt text](images/add_token.png)
 _adding token_
 
 - `localhost:3000/api/v1/users` return all users from the database **[GET]** **_token required_**
 - `localhost:3000/api/v1/users/:id` return one user from database by id **[GET]** **_token required_**
 - `localhost:3000/api/v1/users` insert new user in the database **[POST]**
-![Alt text](images\user_request_body.png)
+![Alt text](images/user_request_body.png)
 _new user example_
 - `localhost:3000/api/v1/login` take the user credentials and return its record from the database and his token **[POST]**
 - `localhost:3000/api/v1/auto_login` return the user record from the database by the token **[GET]** **_token required_**
@@ -99,18 +99,18 @@ _new user example_
 
 - `localhost:3000/api/v1/posts` return all posts from the database **[GET]** **_token required_**
 - `localhost:3000/api/v1/posts` insert new post in the database **[POST]** **_token required_**
-![Alt text](images\post_request_body.png)
+![Alt text](images/post_request_body.png)
 _new post example_
 - `localhost:3000/api/v1/posts/:id` return one post from database by id **[GET]** **_token required_**
 - `localhost:3000/api/v1/posts/:id` Delete post by its id **[DELETE]** **_token required_**
 - `localhost:3000/api/v1/posts/:id` edit post by its id **[PUT]** **_token required_**
 - `localhost:3000/api/v1/posts/:id/comments` return all the comments on that post in the database **[GET]** **_token required_**
 - `localhost:3000/api/v1/posts/:id/comments` add new comment on that post **[POST]** **_token required_**
-![Alt text](images\comment_request_body.png)
+![Alt text](images/comment_request_body.png)
 _new comment example_
 - `localhost:3000/api/v1/posts/:id/comments/:id` return one comment on that post by its id **[GET]** **_token required_**
 - `localhost:3000/api/v1/posts/:id/comments/:id` Edit One comment by its id on that post **[PUT]** **_token required_**
 - `localhost:3000/api/v1/posts/:id/comments/:id` Delete the comment by its id on that post **[DELETE]** **_token required_**
 - `localhost:3000/api/v1/posts/:id/tags/:id` Edit tag on a post by its id **[PUT]** **_token required_**
-![Alt text](images\tag_edit_request_body.png)
+![Alt text](images/tag_edit_request_body.png)
 _tag edit example_
