@@ -1,0 +1,28 @@
+version: '3'
+volumes:
+  db_data:
+  gem_cache:
+services:
+  blog_db:
+    image: mysql
+    container_name: database
+    volumes:
+      - db_data:/var/lib/mysql/data
+    ports:
+      - 3000:3000
+      - 4000:4000
+  blog_app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: blog_app
+    volumes:
+      - .:/var/blog_app
+      - gem_cache:/user/local/bundle/gems
+    ports:
+      - 3000:3000
+      - 4000:4000
+    entrypoint: ["bin/rails"]
+    command: ["server", "-b", "0.0.0.0"]
+    debends_on:
+      - blog_db
